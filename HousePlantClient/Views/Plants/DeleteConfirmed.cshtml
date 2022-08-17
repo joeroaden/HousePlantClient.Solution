@@ -1,0 +1,10 @@
+@{
+  ViewData["Title"] = "Delete Confirmed";
+}
+
+
+<h2>Are you sure you want to delete @(Model.CommonName)?</h2>
+
+
+<a href="/Plants/Delete/@(Model.PlantId)"><p>DELETE PLANT</p></a>
+<p>@Html.ActionLink("Back to Plant list", "Index")</p>

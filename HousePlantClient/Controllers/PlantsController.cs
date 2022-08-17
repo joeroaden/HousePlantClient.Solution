@@ -43,10 +43,17 @@ namespace HousePlantClient.Controllers
       return RedirectToAction("Details", id);
     }
 
-    public IActionResult Delete(int id)
+    public IActionResult DeleteConfirmed(int id)
+    {
+      var plant = Plant.GetDetails(id);
+      return View(plant);
+    }
+
+    public IActionResult Delete(int id, Plant plant)
     {
       Plant.Delete(id);
       return RedirectToAction("Index");
     }
+
   }
 }

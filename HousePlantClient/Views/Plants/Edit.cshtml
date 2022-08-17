@@ -1,0 +1,33 @@
+@{
+  ViewData["Title"] = "Edit";
+}
+
+<h1>Edit Info:</h1>
+
+<form action="/Plants/Details/@(Model.PlantId)" method="post">
+  <label for="name">Plant's Name</label>
+  <input type="text" id="name" name="name" value="@(Model.Name)">
+  <label for="commonName">Common Name</label>
+  <input type="text" id="commonName" name="commonName" value="@(Model.CommonName)">
+  <label for="Description">Description</label>
+  <input type="textarea" id="description" name="description" value="@(Model.Description)">
+  <label for="type">Type</label>
+  <input type="text" name="type" id="type" value="@(Model.Type)">
+  <label for="sunlight">Sunlight Requirement</label>
+  <input type="text" id="sunlight" name="sunlight" value="@(Model.Sunlight)">
+  <label for="water">Water Requirement</label>
+  <input type="text" name="water" id="water" value="@(Model.Water)">
+  <label for="humidity">Humidity Requirement</label>
+  <input type="text" id="humidity" name="humidity" value="@(Model.Humidity)">
+  <label for="soil">Soil Requirement</label>
+  <input type="text" id="soil" name="soil" value="@(Model.Soil)">
+  <label for="propagation">Propagation Method</label>
+  <input type="text" id="propagation" name="propagation" value="@(Model.Propagation)">
+  <label for="tempMin">Minimum Temperature</label>
+  <input type="number" name="tempMin" id="tempMin" value="@(Model.TempMin)">
+  <label for="tempMax">Maximum Temperature</label>
+  <input type="number" name="tempMax" name="tempMax" value="@(Model.TempMax)">
+  <button type="submit">Update</button>
+</form>
+
+<a href="/Plants/Details/@(Model.PlantId)"><p>Return to Details</p></a>

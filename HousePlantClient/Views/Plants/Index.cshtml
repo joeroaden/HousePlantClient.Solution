@@ -1,0 +1,50 @@
+@{
+  ViewData["Title"] = "Home Page";
+}
+
+<h1>New Plant:</h1>
+
+<form action="/plants" method="post">
+  <label for="name">Plant's Name</label>
+  <input type="text" id="name" name="name">
+  <label for="commonName">Common Name</label>
+  <input type="text" id="commonName" name="commonName">
+  <label for="Description">Description</label>
+  <input type="textarea" id="description" name="description">
+  <label for="type">Type</label>
+  <input type="text" name="type" id="type">
+  <label for="sunlight">Sunlight Requirement</label>
+  <input type="text" id="sunlight" name="sunlight">
+  <label for="water">Water Requirement</label>
+  <input type="text" name="water" id="water">
+  <label for="humidity">Humidity Requirement</label>
+  <input type="text" id="humidity" name="humidity">
+  <label for="soil">Soil Requirement</label>
+  <input type="text" id="soil" name="soil">
+  <label for="propagation">Propagation Method</label>
+  <input type="text" id="propagation" name="propagation">
+  <label for="tempMin">Minimum Temperature</label>
+  <input type="number" name="tempMin" id="tempMin">
+  <label for="tempMax">Maximum Temperature</label>
+  <input type="number" name="tempMax" name="tempMax">
+</form>
+<hr />
+<h1>All plants:</h1>
+<ol>
+  @foreach (Plant plant in Model)
+  {
+    <ul>
+      <li>Name: @plant.Name</li>
+      <li>Common Name: @plant.CommonName</li>
+      <li>Description: @plant.Description</li>
+      <li>Type: @plant.Type</li>
+      <li>Sunlight Requirement: @plant.Sunlight</li>
+      <li>Water Requirement: @plant.Water</li>
+      <li>Humidity Requirement: @plant.Humidity</li>
+      <li>Soil Requirement: @plant.Soil</li>
+      <li>Propagation Method: @plant.Propagation</li>
+      <li>Minimum Temperature: @plant.TempMin</li>
+      <li>Maximum Temperature: @plant.TempMax</li>
+    </ul>
+  }
+</ol>

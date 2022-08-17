@@ -35,9 +35,9 @@
   @foreach (Plant plant in Model)
   {
     <ul>
-      <li>Name: @plant.Name</li>
-      <li>Common Name: @plant.CommonName</li>
-      <li>Description: @plant.Description</li>
+      @* <li>Name: @plant.Name</li> *@
+      <li>Common Name: @Html.ActionLink($"{plant.CommonName}", "Details", new { id = plant.PlantId})</li>
+      @* <li>Description: @plant.Description</li>
       <li>Type: @plant.Type</li>
       <li>Sunlight Requirement: @plant.Sunlight</li>
       <li>Water Requirement: @plant.Water</li>
@@ -45,7 +45,7 @@
       <li>Soil Requirement: @plant.Soil</li>
       <li>Propagation Method: @plant.Propagation</li>
       <li>Minimum Temperature: @plant.TempMin</li>
-      <li>Maximum Temperature: @plant.TempMax</li>
+      <li>Maximum Temperature: @plant.TempMax</li> *@
     </ul>
     <hr />
   }

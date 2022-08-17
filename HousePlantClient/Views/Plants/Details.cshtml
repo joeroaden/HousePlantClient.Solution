@@ -1,0 +1,22 @@
+@{
+  ViewData["Title"] = "Details";
+}
+
+<h1>Plant Details:</h1>
+
+<ul>
+  <li>Name: @Model.Name</li>
+  <li>Common Name: @Model.CommonName</li>
+  <li>Description: @Model.Description</li>
+  <li>Type: @Model.Type</li>
+  <li>Sunlight Requirement: @Model.Sunlight</li>
+  <li>Water Requirement: @Model.Water</li>
+  <li>Humidity Requirement: @Model.Humidity</li>
+  <li>Soil Requirement: @Model.Soil</li>
+  <li>Propagation Method: @Model.Propagation</li>
+  <li>Minimum Temperature: @Model.TempMin</li>
+  <li>Maximum Temperature: @Model.TempMax</li>
+</ul>
+<p>@Html.ActionLink("Back to Plant list", "Index")</p>
+<p>@Html.ActionLink("Edit Plant", "Edit", new { id = Model.PlantId })</p>
+<p>@Html.ActionLink("Delete Plant", "Delete", new { id = Model.PlantId })</p>

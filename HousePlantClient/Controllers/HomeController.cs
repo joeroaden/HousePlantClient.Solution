@@ -20,7 +20,7 @@ namespace HousePlantClient.Controllers
 
         public IActionResult Index()
         {
-            return RedirectToAction("Index", "Plants");
+            return View();
         }
 
         public IActionResult Privacy()
